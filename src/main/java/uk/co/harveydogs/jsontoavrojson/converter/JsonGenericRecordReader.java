@@ -1,4 +1,4 @@
-package tech.allegro.schema.json2avro.converter;
+package uk.co.harveydogs.jsontoavrojson.converter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.avro.AvroRuntimeException;
@@ -16,7 +16,7 @@ import java.util.function.Function;
 
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
-import static tech.allegro.schema.json2avro.converter.AvroTypeExceptions.*;
+import static uk.co.harveydogs.jsontoavrojson.converter.AvroTypeExceptions.*;
 
 public class JsonGenericRecordReader {
     private static final Object INCOMPATIBLE = new Object();

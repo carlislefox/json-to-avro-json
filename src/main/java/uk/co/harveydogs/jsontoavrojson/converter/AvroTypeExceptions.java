@@ -1,4 +1,4 @@
-package tech.allegro.schema.json2avro.converter;
+package uk.co.harveydogs.jsontoavrojson.converter;
 
 import org.apache.avro.AvroTypeException;
 

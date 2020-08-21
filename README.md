@@ -1,5 +1,5 @@
 # JSON to Avro JSON
-Utility project for converting JSON to... for lack of a better way of describing it... exploded union Avro JSON. This is a mutation of https://github.com/allegro/json-avro-converter, with the added ability to take raw JSON and convert it to the Union JSON expected by Avro.
+Utility project for converting JSON to... for lack of a better way of describing it... exploded union Avro JSON. This project is a mutation of https://github.com/allegro/json-avro-converter, specifically with the ability to take raw JSON and convert it to the Union JSON expected by Avro.
 
 Optional fields in Avro are by definition Union types, as they can be either null _or_ whatever their primitive type is, say a ```long``` or a ```string``` or an ```int``` or whatever. In order for the Avro JSON encoder to work it needs to be told explicitly what type these values are, for example your JSON might look like this:
 
@@ -31,12 +31,10 @@ This presents a problem when you are just trying to stuff some JSON through Avro
 Usage is simple, you need an instance of the converter, your avro schema, and the json you are trying to convert.
 
 ```java
-final JsonAvroConverter jsonAvroConverter = new JsonAvroConverter();
+final JsonToAvroJson jsonToAvroJson = new JsonToAvroJson();
 
 final String json = "Your JSON file";
 final String schema = "Your avro schema"
 
-final String convertedJson = convertJsonToAvroJson(json, schema);
+final String convertedJson = jsonToAvroJson.convert(json, schema);
 ```
-
-There are a bunch more methods available in the JsonAvroConverter courtesy of the original author over at https://github.com/allegro/json-avro-converter, it seemed silly to take them out.
