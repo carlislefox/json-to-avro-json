@@ -5,7 +5,7 @@
 
 	<groupId>uk.co.harveydogs</groupId>
 	<artifactId>json-to-avro-json</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>json-to-avro-json</name>
 	<description>Utilities for converting raw JSON to Avro UNION Json</description>
