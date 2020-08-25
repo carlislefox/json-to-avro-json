@@ -5,24 +5,17 @@
 
 	<groupId>uk.co.harveydogs</groupId>
 	<artifactId>json-to-avro-json</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>8</source>
-					<target>8</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<version>0.0.2-SNAPSHOT</version>
+
 	<name>json-to-avro-json</name>
 	<description>Utilities for converting raw JSON to Avro UNION Json</description>
 
 	<properties>
 		<java.version>11</java.version>
+
+		<!-- Dependencies -->
+		<avro.version>1.10.0</avro.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -30,9 +23,22 @@
 		<dependency>
 			<groupId>org.apache.avro</groupId>
 			<artifactId>avro</artifactId>
-			<version>1.10.0</version>
+			<version>${avro.version}</version>
 		</dependency>
-
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

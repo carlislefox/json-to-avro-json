@@ -31,10 +31,9 @@ This presents a problem when you are just trying to stuff some JSON through Avro
 Usage is simple, you need an instance of the converter, your avro schema, and the json you are trying to convert.
 
 ```java
-final JsonToAvroJson jsonToAvroJson = new JsonToAvroJson();
-
 final String json = "Your JSON file";
 final String schema = "Your avro schema"
 
+final JsonToAvroJson jsonToAvroJson = new JsonToAvroJson();
 final String convertedJson = jsonToAvroJson.convert(json, schema);
 ```
